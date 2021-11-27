@@ -27785,8 +27785,6 @@ function LeaderboardView() {
     }, /* @__PURE__ */ v("p", null, rank, "."), /* @__PURE__ */ v(PlayerName, {
       address
     }), /* @__PURE__ */ v("p", {
-      style: { fontSize: "0.8em", color: "#838383" }
-    }, "(Score ", dfScore, ")"), /* @__PURE__ */ v("p", {
       style: { marginLeft: "auto" }
     }, contribution));
   }
