@@ -27716,7 +27716,7 @@ function loadLeaderboard(store) {
       setLoading(true);
       setError(null);
       const count = await daoContract.playerCounter();
-      const indexes = [...Array(count).keys()];
+      const indexes = [...Array(count.toNumber()).keys()];
       const players = await Promise3.map(indexes, (i3) => daoContract.players(i3));
       const dfScores = await Promise3.map(players, getDfScore);
       const contributions = await Promise3.map(players, getContribution);
