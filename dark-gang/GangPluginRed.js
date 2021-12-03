@@ -25,6 +25,403 @@ var __toModule = (module2) => {
   return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
 };
 
+// node_modules/@darkforest_eth/types/dist/arrival.js
+var require_arrival = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/arrival.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/artifact.js
+var require_artifact = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/artifact.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.artifactNameFromArtifact = exports2.ArtifactRarityNames = exports2.ArtifactRarity = exports2.ArtifactTypeNames = exports2.ArtifactType = void 0;
+    exports2.ArtifactType = {
+      Unknown: 0,
+      Monolith: 1,
+      Colossus: 2,
+      Spaceship: 3,
+      Pyramid: 4,
+      Wormhole: 5,
+      PlanetaryShield: 6,
+      PhotoidCannon: 7,
+      BloomFilter: 8,
+      BlackDomain: 9
+    };
+    exports2.ArtifactTypeNames = {
+      [exports2.ArtifactType.Unknown]: "Unknown",
+      [exports2.ArtifactType.Monolith]: "Monolith",
+      [exports2.ArtifactType.Colossus]: "Colossus",
+      [exports2.ArtifactType.Spaceship]: "Spaceship",
+      [exports2.ArtifactType.Pyramid]: "Pyramid",
+      [exports2.ArtifactType.Wormhole]: "Wormhole",
+      [exports2.ArtifactType.PlanetaryShield]: "Planetary Shield",
+      [exports2.ArtifactType.PhotoidCannon]: "Photoid Cannon",
+      [exports2.ArtifactType.BloomFilter]: "Bloom Filter",
+      [exports2.ArtifactType.BlackDomain]: "Black Domain"
+    };
+    exports2.ArtifactRarity = {
+      Unknown: 0,
+      Common: 1,
+      Rare: 2,
+      Epic: 3,
+      Legendary: 4,
+      Mythic: 5
+    };
+    exports2.ArtifactRarityNames = {
+      [exports2.ArtifactRarity.Unknown]: "Unknown",
+      [exports2.ArtifactRarity.Common]: "Common",
+      [exports2.ArtifactRarity.Rare]: "Rare",
+      [exports2.ArtifactRarity.Epic]: "Epic",
+      [exports2.ArtifactRarity.Legendary]: "Legendary",
+      [exports2.ArtifactRarity.Mythic]: "Mythic"
+    };
+    var godGrammar = {
+      god1: [
+        "c'",
+        "za",
+        "ry'",
+        "ab'",
+        "bak'",
+        "dt'",
+        "ek'",
+        "fah'",
+        "q'",
+        "qo",
+        "van",
+        "bow",
+        "gui",
+        "si"
+      ],
+      god2: [
+        "thun",
+        "tchalla",
+        "thovo",
+        "saron",
+        "zoth",
+        "sharrj",
+        "thulu",
+        "ra",
+        "wer",
+        "doin",
+        "renstad",
+        "nevere",
+        "goth",
+        "anton",
+        "layton"
+      ]
+    };
+    function artifactNameFromArtifact(artifact) {
+      const idNum = parseInt(artifact.id, 16);
+      const roll1 = idNum % 7919 % godGrammar.god1.length;
+      const roll2 = idNum % 7883 % godGrammar.god2.length;
+      const name2 = godGrammar.god1[roll1] + godGrammar.god2[roll2];
+      const nameCapitalized = name2.charAt(0).toUpperCase() + name2.slice(1);
+      return nameCapitalized;
+    }
+    exports2.artifactNameFromArtifact = artifactNameFromArtifact;
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/claim.js
+var require_claim = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/claim.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/database_types.js
+var require_database_types = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/database_types.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/diagnostics.js
+var require_diagnostics = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/diagnostics.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/event.js
+var require_event = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/event.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/game_types.js
+var require_game_types = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/game_types.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.BiomeNames = exports2.Biome = exports2.SpaceTypeNames = exports2.SpaceType = void 0;
+    exports2.SpaceType = {
+      NEBULA: 0,
+      SPACE: 1,
+      DEEP_SPACE: 2,
+      DEAD_SPACE: 3
+    };
+    exports2.SpaceTypeNames = {
+      [exports2.SpaceType.NEBULA]: "Nebula",
+      [exports2.SpaceType.SPACE]: "Space",
+      [exports2.SpaceType.DEEP_SPACE]: "Deep Space",
+      [exports2.SpaceType.DEAD_SPACE]: "Dead Space"
+    };
+    exports2.Biome = {
+      UNKNOWN: 0,
+      OCEAN: 1,
+      FOREST: 2,
+      GRASSLAND: 3,
+      TUNDRA: 4,
+      SWAMP: 5,
+      DESERT: 6,
+      ICE: 7,
+      WASTELAND: 8,
+      LAVA: 9,
+      CORRUPTED: 10
+    };
+    exports2.BiomeNames = {
+      [exports2.Biome.UNKNOWN]: "Unknown",
+      [exports2.Biome.OCEAN]: "Ocean",
+      [exports2.Biome.FOREST]: "Forest",
+      [exports2.Biome.GRASSLAND]: "Grassland",
+      [exports2.Biome.TUNDRA]: "Tundra",
+      [exports2.Biome.SWAMP]: "Swamp",
+      [exports2.Biome.DESERT]: "Desert",
+      [exports2.Biome.ICE]: "Ice",
+      [exports2.Biome.WASTELAND]: "Wasteland",
+      [exports2.Biome.LAVA]: "Lava",
+      [exports2.Biome.CORRUPTED]: "Corrupted"
+    };
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/gas_prices.js
+var require_gas_prices = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/gas_prices.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/gpt_types.js
+var require_gpt_types = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/gpt_types.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/identifier.js
+var require_identifier = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/identifier.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/planet.js
+var require_planet = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/planet.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.DFStatefulAnimation = exports2.DFAnimation = exports2.PlanetTypeNames = exports2.PlanetType = exports2.PlanetLevelNames = exports2.PlanetLevel = void 0;
+    exports2.PlanetLevel = {
+      ZERO: 0,
+      ONE: 1,
+      TWO: 2,
+      THREE: 3,
+      FOUR: 4,
+      FIVE: 5,
+      SIX: 6,
+      SEVEN: 7,
+      EIGHT: 8,
+      NINE: 9
+    };
+    exports2.PlanetLevelNames = {
+      [exports2.PlanetLevel.ZERO]: "Level 0",
+      [exports2.PlanetLevel.ONE]: "Level 1",
+      [exports2.PlanetLevel.TWO]: "Level 2",
+      [exports2.PlanetLevel.THREE]: "Level 3",
+      [exports2.PlanetLevel.FOUR]: "Level 4",
+      [exports2.PlanetLevel.FIVE]: "Level 5",
+      [exports2.PlanetLevel.SIX]: "Level 6",
+      [exports2.PlanetLevel.SEVEN]: "Level 7",
+      [exports2.PlanetLevel.EIGHT]: "Level 8",
+      [exports2.PlanetLevel.NINE]: "Level 9"
+    };
+    exports2.PlanetType = {
+      PLANET: 0,
+      SILVER_MINE: 1,
+      RUINS: 2,
+      TRADING_POST: 3,
+      SILVER_BANK: 4
+    };
+    exports2.PlanetTypeNames = {
+      [exports2.PlanetType.PLANET]: "Planet",
+      [exports2.PlanetType.SILVER_MINE]: "Asteroid Field",
+      [exports2.PlanetType.RUINS]: "Foundry",
+      [exports2.PlanetType.TRADING_POST]: "Spacetime Rip",
+      [exports2.PlanetType.SILVER_BANK]: "Quasar"
+    };
+    var DFAnimation = class {
+      constructor(update2) {
+        this._update = update2;
+        this._value = 0;
+      }
+      update() {
+        this._value = this._update();
+      }
+      value() {
+        return this._value;
+      }
+    };
+    exports2.DFAnimation = DFAnimation;
+    var DFStatefulAnimation = class extends DFAnimation {
+      constructor(state, update2) {
+        super(update2);
+        this._state = state;
+      }
+      state() {
+        return this._state;
+      }
+    };
+    exports2.DFStatefulAnimation = DFStatefulAnimation;
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/planetmessage.js
+var require_planetmessage = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/planetmessage.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.PlanetMessageType = void 0;
+    exports2.PlanetMessageType = {
+      EmojiFlag: "EmojiFlag"
+    };
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/player.js
+var require_player = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/player.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/reveal.js
+var require_reveal = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/reveal.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/setting.js
+var require_setting = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/setting.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.AutoGasSetting = void 0;
+    exports2.AutoGasSetting = {
+      Slow: "Slow",
+      Average: "Average",
+      Fast: "Fast"
+    };
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/transactions.js
+var require_transactions = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/transactions.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/upgrade.js
+var require_upgrade = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/upgrade.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.UpgradeBranchName = void 0;
+    exports2.UpgradeBranchName = {
+      Defense: 0,
+      Range: 1,
+      Speed: 2
+    };
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/utility.js
+var require_utility = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/utility.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/world.js
+var require_world = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/world.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+  }
+});
+
+// node_modules/@darkforest_eth/types/dist/index.js
+var require_dist = __commonJS({
+  "node_modules/@darkforest_eth/types/dist/index.js"(exports2) {
+    "use strict";
+    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o3, m3, k3, k22) {
+      if (k22 === void 0)
+        k22 = k3;
+      Object.defineProperty(o3, k22, { enumerable: true, get: function() {
+        return m3[k3];
+      } });
+    } : function(o3, m3, k3, k22) {
+      if (k22 === void 0)
+        k22 = k3;
+      o3[k22] = m3[k3];
+    });
+    var __exportStar = exports2 && exports2.__exportStar || function(m3, exports3) {
+      for (var p2 in m3)
+        if (p2 !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p2))
+          __createBinding(exports3, m3, p2);
+    };
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    __exportStar(require_arrival(), exports2);
+    __exportStar(require_artifact(), exports2);
+    __exportStar(require_claim(), exports2);
+    __exportStar(require_database_types(), exports2);
+    __exportStar(require_diagnostics(), exports2);
+    __exportStar(require_event(), exports2);
+    __exportStar(require_game_types(), exports2);
+    __exportStar(require_gas_prices(), exports2);
+    __exportStar(require_gpt_types(), exports2);
+    __exportStar(require_identifier(), exports2);
+    __exportStar(require_planet(), exports2);
+    __exportStar(require_planetmessage(), exports2);
+    __exportStar(require_player(), exports2);
+    __exportStar(require_reveal(), exports2);
+    __exportStar(require_setting(), exports2);
+    __exportStar(require_transactions(), exports2);
+    __exportStar(require_upgrade(), exports2);
+    __exportStar(require_utility(), exports2);
+    __exportStar(require_world(), exports2);
+  }
+});
+
 // (disabled):node_modules/buffer/index.js
 var require_buffer = __commonJS({
   "(disabled):node_modules/buffer/index.js"() {
@@ -6322,414 +6719,12 @@ var require_bech32 = __commonJS({
   }
 });
 
-// node_modules/@darkforest_eth/types/dist/arrival.js
-var require_arrival = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/arrival.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/artifact.js
-var require_artifact = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/artifact.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.artifactNameFromArtifact = exports2.ArtifactRarityNames = exports2.ArtifactRarity = exports2.ArtifactTypeNames = exports2.ArtifactType = void 0;
-    exports2.ArtifactType = {
-      Unknown: 0,
-      Monolith: 1,
-      Colossus: 2,
-      Spaceship: 3,
-      Pyramid: 4,
-      Wormhole: 5,
-      PlanetaryShield: 6,
-      PhotoidCannon: 7,
-      BloomFilter: 8,
-      BlackDomain: 9
-    };
-    exports2.ArtifactTypeNames = {
-      [exports2.ArtifactType.Unknown]: "Unknown",
-      [exports2.ArtifactType.Monolith]: "Monolith",
-      [exports2.ArtifactType.Colossus]: "Colossus",
-      [exports2.ArtifactType.Spaceship]: "Spaceship",
-      [exports2.ArtifactType.Pyramid]: "Pyramid",
-      [exports2.ArtifactType.Wormhole]: "Wormhole",
-      [exports2.ArtifactType.PlanetaryShield]: "Planetary Shield",
-      [exports2.ArtifactType.PhotoidCannon]: "Photoid Cannon",
-      [exports2.ArtifactType.BloomFilter]: "Bloom Filter",
-      [exports2.ArtifactType.BlackDomain]: "Black Domain"
-    };
-    exports2.ArtifactRarity = {
-      Unknown: 0,
-      Common: 1,
-      Rare: 2,
-      Epic: 3,
-      Legendary: 4,
-      Mythic: 5
-    };
-    exports2.ArtifactRarityNames = {
-      [exports2.ArtifactRarity.Unknown]: "Unknown",
-      [exports2.ArtifactRarity.Common]: "Common",
-      [exports2.ArtifactRarity.Rare]: "Rare",
-      [exports2.ArtifactRarity.Epic]: "Epic",
-      [exports2.ArtifactRarity.Legendary]: "Legendary",
-      [exports2.ArtifactRarity.Mythic]: "Mythic"
-    };
-    var godGrammar = {
-      god1: [
-        "c'",
-        "za",
-        "ry'",
-        "ab'",
-        "bak'",
-        "dt'",
-        "ek'",
-        "fah'",
-        "q'",
-        "qo",
-        "van",
-        "bow",
-        "gui",
-        "si"
-      ],
-      god2: [
-        "thun",
-        "tchalla",
-        "thovo",
-        "saron",
-        "zoth",
-        "sharrj",
-        "thulu",
-        "ra",
-        "wer",
-        "doin",
-        "renstad",
-        "nevere",
-        "goth",
-        "anton",
-        "layton"
-      ]
-    };
-    function artifactNameFromArtifact(artifact) {
-      const idNum = parseInt(artifact.id, 16);
-      const roll1 = idNum % 7919 % godGrammar.god1.length;
-      const roll2 = idNum % 7883 % godGrammar.god2.length;
-      const name2 = godGrammar.god1[roll1] + godGrammar.god2[roll2];
-      const nameCapitalized = name2.charAt(0).toUpperCase() + name2.slice(1);
-      return nameCapitalized;
-    }
-    exports2.artifactNameFromArtifact = artifactNameFromArtifact;
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/claim.js
-var require_claim = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/claim.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/database_types.js
-var require_database_types = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/database_types.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/diagnostics.js
-var require_diagnostics = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/diagnostics.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/event.js
-var require_event = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/event.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/game_types.js
-var require_game_types = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/game_types.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.BiomeNames = exports2.Biome = exports2.SpaceTypeNames = exports2.SpaceType = void 0;
-    exports2.SpaceType = {
-      NEBULA: 0,
-      SPACE: 1,
-      DEEP_SPACE: 2,
-      DEAD_SPACE: 3
-    };
-    exports2.SpaceTypeNames = {
-      [exports2.SpaceType.NEBULA]: "Nebula",
-      [exports2.SpaceType.SPACE]: "Space",
-      [exports2.SpaceType.DEEP_SPACE]: "Deep Space",
-      [exports2.SpaceType.DEAD_SPACE]: "Dead Space"
-    };
-    exports2.Biome = {
-      UNKNOWN: 0,
-      OCEAN: 1,
-      FOREST: 2,
-      GRASSLAND: 3,
-      TUNDRA: 4,
-      SWAMP: 5,
-      DESERT: 6,
-      ICE: 7,
-      WASTELAND: 8,
-      LAVA: 9,
-      CORRUPTED: 10
-    };
-    exports2.BiomeNames = {
-      [exports2.Biome.UNKNOWN]: "Unknown",
-      [exports2.Biome.OCEAN]: "Ocean",
-      [exports2.Biome.FOREST]: "Forest",
-      [exports2.Biome.GRASSLAND]: "Grassland",
-      [exports2.Biome.TUNDRA]: "Tundra",
-      [exports2.Biome.SWAMP]: "Swamp",
-      [exports2.Biome.DESERT]: "Desert",
-      [exports2.Biome.ICE]: "Ice",
-      [exports2.Biome.WASTELAND]: "Wasteland",
-      [exports2.Biome.LAVA]: "Lava",
-      [exports2.Biome.CORRUPTED]: "Corrupted"
-    };
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/gas_prices.js
-var require_gas_prices = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/gas_prices.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/gpt_types.js
-var require_gpt_types = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/gpt_types.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/identifier.js
-var require_identifier = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/identifier.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/planet.js
-var require_planet = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/planet.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.DFStatefulAnimation = exports2.DFAnimation = exports2.PlanetTypeNames = exports2.PlanetType = exports2.PlanetLevelNames = exports2.PlanetLevel = void 0;
-    exports2.PlanetLevel = {
-      ZERO: 0,
-      ONE: 1,
-      TWO: 2,
-      THREE: 3,
-      FOUR: 4,
-      FIVE: 5,
-      SIX: 6,
-      SEVEN: 7,
-      EIGHT: 8,
-      NINE: 9
-    };
-    exports2.PlanetLevelNames = {
-      [exports2.PlanetLevel.ZERO]: "Level 0",
-      [exports2.PlanetLevel.ONE]: "Level 1",
-      [exports2.PlanetLevel.TWO]: "Level 2",
-      [exports2.PlanetLevel.THREE]: "Level 3",
-      [exports2.PlanetLevel.FOUR]: "Level 4",
-      [exports2.PlanetLevel.FIVE]: "Level 5",
-      [exports2.PlanetLevel.SIX]: "Level 6",
-      [exports2.PlanetLevel.SEVEN]: "Level 7",
-      [exports2.PlanetLevel.EIGHT]: "Level 8",
-      [exports2.PlanetLevel.NINE]: "Level 9"
-    };
-    exports2.PlanetType = {
-      PLANET: 0,
-      SILVER_MINE: 1,
-      RUINS: 2,
-      TRADING_POST: 3,
-      SILVER_BANK: 4
-    };
-    exports2.PlanetTypeNames = {
-      [exports2.PlanetType.PLANET]: "Planet",
-      [exports2.PlanetType.SILVER_MINE]: "Asteroid Field",
-      [exports2.PlanetType.RUINS]: "Foundry",
-      [exports2.PlanetType.TRADING_POST]: "Spacetime Rip",
-      [exports2.PlanetType.SILVER_BANK]: "Quasar"
-    };
-    var DFAnimation = class {
-      constructor(update2) {
-        this._update = update2;
-        this._value = 0;
-      }
-      update() {
-        this._value = this._update();
-      }
-      value() {
-        return this._value;
-      }
-    };
-    exports2.DFAnimation = DFAnimation;
-    var DFStatefulAnimation = class extends DFAnimation {
-      constructor(state, update2) {
-        super(update2);
-        this._state = state;
-      }
-      state() {
-        return this._state;
-      }
-    };
-    exports2.DFStatefulAnimation = DFStatefulAnimation;
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/planetmessage.js
-var require_planetmessage = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/planetmessage.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.PlanetMessageType = void 0;
-    exports2.PlanetMessageType = {
-      EmojiFlag: "EmojiFlag"
-    };
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/player.js
-var require_player = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/player.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/reveal.js
-var require_reveal = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/reveal.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/setting.js
-var require_setting = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/setting.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.AutoGasSetting = void 0;
-    exports2.AutoGasSetting = {
-      Slow: "Slow",
-      Average: "Average",
-      Fast: "Fast"
-    };
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/transactions.js
-var require_transactions = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/transactions.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/upgrade.js
-var require_upgrade = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/upgrade.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.UpgradeBranchName = void 0;
-    exports2.UpgradeBranchName = {
-      Defense: 0,
-      Range: 1,
-      Speed: 2
-    };
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/utility.js
-var require_utility = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/utility.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/world.js
-var require_world = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/world.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-  }
-});
-
-// node_modules/@darkforest_eth/types/dist/index.js
-var require_dist = __commonJS({
-  "node_modules/@darkforest_eth/types/dist/index.js"(exports2) {
-    "use strict";
-    var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o3, m3, k3, k22) {
-      if (k22 === void 0)
-        k22 = k3;
-      Object.defineProperty(o3, k22, { enumerable: true, get: function() {
-        return m3[k3];
-      } });
-    } : function(o3, m3, k3, k22) {
-      if (k22 === void 0)
-        k22 = k3;
-      o3[k22] = m3[k3];
-    });
-    var __exportStar = exports2 && exports2.__exportStar || function(m3, exports3) {
-      for (var p2 in m3)
-        if (p2 !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p2))
-          __createBinding(exports3, m3, p2);
-    };
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    __exportStar(require_arrival(), exports2);
-    __exportStar(require_artifact(), exports2);
-    __exportStar(require_claim(), exports2);
-    __exportStar(require_database_types(), exports2);
-    __exportStar(require_diagnostics(), exports2);
-    __exportStar(require_event(), exports2);
-    __exportStar(require_game_types(), exports2);
-    __exportStar(require_gas_prices(), exports2);
-    __exportStar(require_gpt_types(), exports2);
-    __exportStar(require_identifier(), exports2);
-    __exportStar(require_planet(), exports2);
-    __exportStar(require_planetmessage(), exports2);
-    __exportStar(require_player(), exports2);
-    __exportStar(require_reveal(), exports2);
-    __exportStar(require_setting(), exports2);
-    __exportStar(require_transactions(), exports2);
-    __exportStar(require_upgrade(), exports2);
-    __exportStar(require_utility(), exports2);
-    __exportStar(require_world(), exports2);
-  }
-});
-
-// src/plugins/abis/DaoContract.json
+// plugins/data/DaoContract.json
 var require_DaoContract = __commonJS({
-  "src/plugins/abis/DaoContract.json"(exports2, module2) {
+  "plugins/data/DaoContract.json"(exports2, module2) {
     module2.exports = [
       {
         inputs: [
-          {
-            internalType: "address",
-            name: "_admin",
-            type: "address"
-          },
           {
             internalType: "contract IDarkForestCore",
             name: "_coreContract",
@@ -6766,20 +6761,14 @@ var require_DaoContract = __commonJS({
       {
         inputs: [
           {
-            internalType: "uint256",
-            name: "",
-            type: "uint256"
+            internalType: "address[]",
+            name: "list",
+            type: "address[]"
           }
         ],
-        name: "ARTIFACT_POINT_VALUES",
-        outputs: [
-          {
-            internalType: "uint256",
-            name: "",
-            type: "uint256"
-          }
-        ],
-        stateMutability: "view",
+        name: "addToWhiteList",
+        outputs: [],
+        stateMutability: "nonpayable",
         type: "function"
       },
       {
@@ -6830,47 +6819,6 @@ var require_DaoContract = __commonJS({
       {
         inputs: [
           {
-            components: [
-              {
-                internalType: "uint256[2]",
-                name: "a",
-                type: "uint256[2]"
-              },
-              {
-                internalType: "uint256[2][2]",
-                name: "b",
-                type: "uint256[2][2]"
-              },
-              {
-                internalType: "uint256[2]",
-                name: "c",
-                type: "uint256[2]"
-              },
-              {
-                internalType: "uint256[7]",
-                name: "input",
-                type: "uint256[7]"
-              }
-            ],
-            internalType: "struct DaoContract.FindArg[]",
-            name: "findArgs",
-            type: "tuple[]"
-          }
-        ],
-        name: "findArtifactAndReturnPlanets",
-        outputs: [
-          {
-            internalType: "uint256",
-            name: "",
-            type: "uint256"
-          }
-        ],
-        stateMutability: "nonpayable",
-        type: "function"
-      },
-      {
-        inputs: [
-          {
             internalType: "uint256[2]",
             name: "_a",
             type: "uint256[2]"
@@ -6900,6 +6848,38 @@ var require_DaoContract = __commonJS({
           }
         ],
         stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "isGameRunning",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        name: "isWhitelisted",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "view",
         type: "function"
       },
       {
@@ -6969,12 +6949,51 @@ var require_DaoContract = __commonJS({
       {
         inputs: [
           {
+            internalType: "address[]",
+            name: "list",
+            type: "address[]"
+          }
+        ],
+        name: "removeFromWhiteList",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256[]",
+            name: "planetIds",
+            type: "uint256[]"
+          }
+        ],
+        name: "returnAllPlanets",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
             internalType: "uint256",
             name: "planetId",
             type: "uint256"
           }
         ],
         name: "returnPlanet",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256[]",
+            name: "planetIds",
+            type: "uint256[]"
+          }
+        ],
+        name: "returnPlanets",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function"
@@ -7006,6 +7025,42 @@ var require_DaoContract = __commonJS({
           }
         ],
         name: "setAdmin",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "contract IDarkForestCore",
+            name: "_coreContract",
+            type: "address"
+          },
+          {
+            internalType: "contract IDarkForestTokens",
+            name: "_tokensContract",
+            type: "address"
+          }
+        ],
+        name: "setDarkForestContract",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "_start",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "_end",
+            type: "uint256"
+          }
+        ],
+        name: "setGameRunningTimestamp",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function"
@@ -9293,7 +9348,7 @@ var require_bluebird = __commonJS({
           MappingPromiseArray.prototype.preservedValues = function() {
             return this._preservedValues;
           };
-          function map3(promises, fn, options, _filter) {
+          function map(promises, fn, options, _filter) {
             if (typeof fn !== "function") {
               return apiRejection("expecting a function but got " + util.classString(fn));
             }
@@ -9312,10 +9367,10 @@ var require_bluebird = __commonJS({
             return new MappingPromiseArray(promises, fn, limit, _filter).promise();
           }
           Promise4.prototype.map = function(fn, options) {
-            return map3(this, fn, options, null);
+            return map(this, fn, options, null);
           };
           Promise4.map = function(promises, fn, options, _filter) {
-            return map3(promises, fn, options, _filter);
+            return map(promises, fn, options, _filter);
           };
         };
       }, { "./util": 36 }], 19: [function(_dereq_2, module2, exports2) {
@@ -10564,11 +10619,11 @@ var require_bluebird = __commonJS({
               this[index + size] = key2;
               index++;
             }
-            return function mapToEntries2(map3) {
-              size = map3.size;
+            return function mapToEntries2(map) {
+              size = map.size;
               index = 0;
-              var ret2 = new Array(map3.size * 2);
-              map3.forEach(extractEntry, ret2);
+              var ret2 = new Array(map.size * 2);
+              map.forEach(extractEntry, ret2);
               return ret2;
             };
           }();
@@ -12344,7 +12399,7 @@ function w2(n2, t3) {
   return typeof t3 == "function" ? t3(n2) : t3;
 }
 
-// src/plugins/helpers/theme.ts
+// plugins/helpers/theme.ts
 var colors = {
   muted: "#838383",
   gray: "#aaaaaa",
@@ -12366,7 +12421,7 @@ var colors = {
   dfmythic: "#ff44b7"
 };
 
-// src/plugins/components/Button.tsx
+// plugins/components/Button.tsx
 function Button({
   children = "",
   style = {},
@@ -12428,6 +12483,80 @@ function themeButton(theme, isActive) {
       };
   }
 }
+
+// plugins/df-apis/Backend/GameLogic/ArrivalUtils.ts
+var import_types = __toModule(require_dist());
+
+// plugins/helpers/df.ts
+var df = window.df;
+var ui = window.ui;
+var { getPlanetName, getPlayerColor } = df.getProcgenUtils();
+var getTwitter = (address) => df.getTwitter(address);
+function useSelectedPlanet() {
+  const [selected, setSelected] = l2(void 0);
+  y2(() => {
+    const { unsubscribe } = ui.selectedPlanetId$.subscribe(setSelected);
+    return () => {
+      unsubscribe();
+    };
+  });
+  return selected;
+}
+function echo(msg) {
+  df.terminal.current.println(msg);
+}
+
+// plugins/helpers/DaoContractAPI.ts
+var DaoContractAPI = class {
+  constructor(_daoContract) {
+    this.REGISTER_OWNERS = "registerPlanetOwners";
+    this.WITHDRAW_SILVER = "withdrawSilverAndReturnPlanets";
+    this.RETURN_PLANETS = "returnPlanets";
+    this.daoContract = _daoContract;
+  }
+  async registerPlanetOwners(planetIds, actionId) {
+    if (!df.contractsAPI.txExecutor) {
+      throw new Error("no signer, cannot execute tx");
+    }
+    const tx = df.contractsAPI.txExecutor.queueTransaction(actionId, this.daoContract, this.REGISTER_OWNERS, [planetIds], { "gasLimit": 6e6 });
+    const unminedTransferTx = {
+      actionId,
+      methodName: this.REGISTER_OWNERS,
+      txHash: (await tx.submitted).hash,
+      sentAtTimestamp: Math.floor(Date.now() / 1e3),
+      planetIds
+    };
+    return df.contractsAPI.waitFor(unminedTransferTx, tx.confirmed);
+  }
+  async withdrawSilverAndReturnPlanets(planetIds, actionId) {
+    if (!df.contractsAPI.txExecutor) {
+      throw new Error("no signer, cannot execute tx");
+    }
+    const tx = df.contractsAPI.txExecutor.queueTransaction(actionId, this.daoContract, this.WITHDRAW_SILVER, [planetIds], { "gasLimit": 6e6 });
+    const unminedTransferTx = {
+      actionId,
+      methodName: this.WITHDRAW_SILVER,
+      txHash: (await tx.submitted).hash,
+      sentAtTimestamp: Math.floor(Date.now() / 1e3),
+      planetIds
+    };
+    return df.contractsAPI.waitFor(unminedTransferTx, tx.confirmed);
+  }
+  async returnPlanets(planetIds, actionId) {
+    if (!df.contractsAPI.txExecutor) {
+      throw new Error("no signer, cannot execute tx");
+    }
+    const tx = df.contractsAPI.txExecutor.queueTransaction(actionId, this.daoContract, this.RETURN_PLANETS, [planetIds], { "gasLimit": 6e6 });
+    const unminedTransferTx = {
+      actionId,
+      methodName: this.RETURN_PLANETS,
+      txHash: (await tx.submitted).hash,
+      sentAtTimestamp: Math.floor(Date.now() / 1e3),
+      planetIds
+    };
+    return df.contractsAPI.waitFor(unminedTransferTx, tx.confirmed);
+  }
+};
 
 // node_modules/ethers/lib.esm/ethers.js
 var ethers_exports = {};
@@ -27086,54 +27215,13 @@ try {
 } catch (error) {
 }
 
-// src/plugins/data/DaoConfig.ts
-var DAO_A_CONTRACT_ADDRESS = "0xEcC8572e9ffCA02Aba6f89D127541b0984a6B511";
-var DAO_B_CONTRACT_ADDRESS = "0x27E0053f853dB33588D18030e79aCECd52C8bfC4";
-var PROVIDER_RPC_URL = "https://rpc.xdaichain.com";
-
-// src/plugins/df-apis/Backend/GameLogic/ArrivalUtils.ts
-var import_types3 = __toModule(require_dist());
-var blocksLeftToProspectExpiration = (currentBlockNumber, prospectedBlockNumber) => {
-  return (prospectedBlockNumber || 0) + 255 - currentBlockNumber;
-};
-var prospectExpired = (currentBlockNumber, prospectedBlockNumber) => {
-  return blocksLeftToProspectExpiration(currentBlockNumber, prospectedBlockNumber) <= 0;
-};
-var isFindable = (planet, currentBlockNumber) => {
-  return currentBlockNumber !== void 0 && planet.planetType === import_types3.PlanetType.RUINS && planet.prospectedBlockNumber !== void 0 && !planet.hasTriedFindingArtifact && !prospectExpired(currentBlockNumber, planet.prospectedBlockNumber);
-};
-var isProspectable = (planet) => {
-  return planet.planetType === import_types3.PlanetType.RUINS && planet.prospectedBlockNumber === void 0;
-};
-var enoughEnergyToProspect = (p2) => {
-  return p2.energy / p2.energyCap > 0.955;
-};
-
-// src/plugins/helpers/df.ts
-var df = window.df;
-var ui = window.ui;
-var { getPlanetName, getPlayerColor } = df.getProcgenUtils();
-var getTwitter = (address) => df.getTwitter(address);
-function useSelectedPlanet() {
-  const [selected, setSelected] = l2(void 0);
-  y2(() => {
-    const { unsubscribe } = ui.selectedPlanetId$.subscribe(setSelected);
-    return () => {
-      unsubscribe();
-    };
-  });
-  return selected;
-}
-function echo(msg) {
-  df.terminal.current.println(msg);
-}
-var bulkUiRefresh = async (planets) => {
-  const locationIds = planets.map((p2) => p2.locationId);
-  await df.bulkHardRefreshPlanets(locationIds);
-};
-
-// src/plugins/data/Store.ts
+// plugins/data/DaoConfig.ts
 var DAO_ABI = require_DaoContract();
+var DAO_CONTRACT_ADDRESS_RED = "0xA4f33bf0911Cad687c71961CCF029a00FF93C765";
+var DAO_CONTRACT_ADDRESS_BLUE = "0xC6c98b76A56B9F8d6952068Db173181EDEc1dc61";
+var PROVIDER_RPC_URL = "https://rpc-df.xdaichain.com";
+
+// plugins/data/Store.ts
 var StoreContextA = D(null);
 var StoreContextB = D(null);
 var StoreProviderA = StoreContextA.Provider;
@@ -27144,36 +27232,65 @@ function useStoreA() {
 function useStoreB() {
   return T2(StoreContextB);
 }
-function createStoreA() {
-  const daoColor = "red";
-  const daoName = "Red Team";
-  const daoAddressLowerCase = DAO_A_CONTRACT_ADDRESS.toLowerCase();
-  const provider = new ethers_exports.providers.JsonRpcProvider(PROVIDER_RPC_URL);
+function createStates() {
+  const [batchWithdrawLoading, setBatchWithdrawLoading] = l2(false);
+  const [batchReturnLoading, setBatchReturnLoading] = l2(false);
+  const [leaderboardLoading, setLeaderboardLoading] = l2(false);
+  const [leaderboardData, setLeaderboardData] = l2({ dao: null, players: [] });
+  const [leaderboardError, setLeaderboardError] = l2(null);
+  return {
+    batchWithdrawLoading,
+    setBatchWithdrawLoading,
+    batchReturnLoading,
+    setBatchReturnLoading,
+    leaderboardLoading,
+    setLeaderboardLoading,
+    leaderboardData,
+    setLeaderboardData,
+    leaderboardError,
+    setLeaderboardError
+  };
+}
+function createStore({ daoColor, daoName, daoAddressLowerCase }) {
+  const endpoint = df.ethConnection.getRpcEndpoint();
+  const provider = new ethers_exports.providers.JsonRpcProvider(endpoint || PROVIDER_RPC_URL);
   const wallet = new ethers_exports.Wallet(df.getPrivateKey(), provider);
   const myAddressLowerCase = wallet.address.toLowerCase();
   const daoContract = new ethers_exports.Contract(daoAddressLowerCase, DAO_ABI, wallet);
   const coreContract = df.contractsAPI.coreContract;
   const whitelistContract = df.contractsAPI.whitelistContract;
-  const store = { daoColor, daoName, provider, wallet, myAddressLowerCase, daoAddressLowerCase, coreContract, whitelistContract, daoContract };
-  console.log("createStoreA", { df, ui, store });
+  const daoContractAPI = new DaoContractAPI(daoContract);
+  const states = createStates();
+  const store = {
+    daoColor,
+    daoName,
+    provider,
+    wallet,
+    myAddressLowerCase,
+    daoAddressLowerCase,
+    coreContract,
+    whitelistContract,
+    daoContract,
+    daoContractAPI,
+    states
+  };
+  console.log(`${daoName} createStore`, { df, ui, store });
   return store;
+}
+function createStoreA() {
+  const daoColor = "red";
+  const daoName = "Red Team";
+  const daoAddressLowerCase = DAO_CONTRACT_ADDRESS_RED.toLowerCase();
+  return createStore({ daoColor, daoName, daoAddressLowerCase });
 }
 function createStoreB() {
   const daoColor = "blue";
   const daoName = "Blue Team";
-  const daoAddressLowerCase = DAO_B_CONTRACT_ADDRESS.toLowerCase();
-  const provider = new ethers_exports.providers.JsonRpcProvider(PROVIDER_RPC_URL);
-  const wallet = new ethers_exports.Wallet(df.getPrivateKey(), provider);
-  const myAddressLowerCase = wallet.address.toLowerCase();
-  const daoContract = new ethers_exports.Contract(daoAddressLowerCase, DAO_ABI, wallet);
-  const coreContract = df.contractsAPI.coreContract;
-  const whitelistContract = df.contractsAPI.whitelistContract;
-  const store = { daoColor, daoName, provider, wallet, myAddressLowerCase, daoAddressLowerCase, coreContract, whitelistContract, daoContract };
-  console.log("createStoreB", { df, ui, store });
-  return store;
+  const daoAddressLowerCase = DAO_CONTRACT_ADDRESS_BLUE.toLowerCase();
+  return createStore({ daoColor, daoName, daoAddressLowerCase });
 }
 
-// src/plugins/components/Navigation.tsx
+// plugins/components/Navigation.tsx
 var styles = {
   container: {
     position: "relative",
@@ -27237,39 +27354,45 @@ function Navigation({ tabs }) {
     onClick: () => setActiveTab(tab.name),
     children: tab.name
   })), /* @__PURE__ */ v("div", {
-    style: { textAlign: "right" }
+    style: { textAlign: "right", fontSize: "0.85em" }
   }, "(My Contribution: ", loading ? "..." : contributions, ")")));
 }
 
-// src/plugins/views/DaoView.tsx
+// plugins/views/DaoView.tsx
 var Promise2 = __toModule(require_bluebird());
 var import_types4 = __toModule(require_dist());
 
-// src/plugins/views/Logo.tsx
-function Logo({ size = 80 }) {
+// plugins/views/Logo.tsx
+function Logo({ size = 200 }) {
+  const styleHtml = `@font-face {
+    font-family: "GuildW";
+    src: url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAa8AAwAAAAACeQAAhmaAAAAAAAAAAAAAAAAAAAAAAAAAABHUE9TAAABHAAAAGkAAACcK9skhk9TLzIAAAGIAAAAUQAAAGBjkCuuY21hcAAAAdwAAABiAAABcgFMFoBnYXNwAAACQAAAAAgAAAAIAAAAEGdseWYAAAJIAAABtAAAAiSlcPv5aGVhZAAAA/wAAAA2AAAANhAoWRpoaGVhAAAENAAAAB4AAAAkBD4HX2htdHgAAARUAAAAJwAAACwTeAH8bG9jYQAABHwAAAAYAAAAGANkA+ZtYXhwAAAElAAAABgAAAAgAA4AJG5hbWUAAASsAAAB9wAAA5y18DjRcG9zdAAABqQAAAAYAAAAIP+adb54nGNgZGBg4GJQYTBiYHJx8wlh4MtJLMlj4GNgAYoz/P/PAJJnzE4tymPgALHAmIWBCchjBGImBhOwyhAGOwZmBjYGrOD/NyA+/P8NkDwL1s8MxBATIGawgsUYgJgZaBojWBaIAWeaD6YAAAB4nGNgYTzKrMDAysDA1MUU8f8XgzeIZpBhjGMwYtRlQAILGBj+CyDx/fz9XBkaGRQYSpnf/mdjYGBxYRRXYGCcDJJj/MZ0AkgpMDADANXvDsAAAAB4nGNgYGBmgGAZBkYGEMgB8hjBfBaGACAtAIQgeQUGd4ZwhhSGTKCK0v//MUX+v/y/6//q//P/zwbCyVDTUAAjG6YYOuAkrARsFBqfCZkDci7Q9QzsMAEO4gylBwAAcJcV1AAAAAEAAf//AA94nGNgQAKMDNb/vzNtY7rIoMTAwKqkx2hqYsdobCQmzq7HyM7HJCoiZmxkZs5urmyuyMzHxDgxe2ZQzKrigCYDa90oO/dk45QMFS9VNf4eTkYJKeXQRM7gGZnl6xO0NApUlBmZHMqCMkr4eU2P5f5bKiTBC7HPnIGBpZzpBAM/A4M5s7GwsjAYMyozGzP/PjK3V/NNXq/ys6n/ztR2S9xiYDrx9yaTOhhbMP76x8bAxKDy/wdTAtMDBlEGRQYGcWQXCxszK5uL8zGZG5mZmqgpK7EBXf/HIcnMJtfTKkScT3qG9VRObn5DJx5zB2szS0dbDutcn5B6TyNdJcbIvwo1SnK64kVhHm7uYV7OHiC3MjFoAh3MyPSSgZmBHehaYWNuRmN2ZU2NGRpJi7gXMTD+/sfK9LIP6CegOoaXjL+B6kCqmEEqwLKkmvEb6C+YGdbTrRmYHvxVAIWZHtDPpkDzRUA+VgNJs4HjBepjxvtR4VxiMyWZ1bX1zVnEp6tP4eCViOXIy2DU/XfH2MzejFHiH2sqt54JAwNq3CcxBTDyM90D2SkMdFUu0EVM9/qAUgD3bnisAAEAAAACGZrI3bpyXw889QAHA+gAAAAA1AidqwAAAADYZl4SACT/9wR3AukAAgAGAAIAAAAAAAB4nGNgZGBgfvufjYGBJY0BDJhfMPgzIANuAFqSA6YAAHicY/zCYMT0ksGaJY3BnKmMQYVRiEETGTPFMegxSjKAQBIAnygFhQAAAAAGAD4AXgCUAKgAtgDKANgA/gEEARJ4nGNgZGBg4GZQZmBiAAFGBjQAAAUSADN4nIVRwWrbQBQcOY6hUEwP7aUUsoce7BavZMeEJIZCEmwIJHYKwddiK7KkoHiNdhWSnvsJvfSaL+gH9Fj6Df2OHnvqaLWGpJRGi9DsvJndeU8AnuEHPFTPe74V9tDkrsI1NPDB4Q1sIXK4jhf45PAm3uKLww08x3eHm3iJn3R59Sfc3eGXwx5eeZ8druGp99XhDbzzvjlcxxvvt8ObmNZeO9xAq/bR4Sb6tbsjtbrN0zgxohd0d8R5EonTIkvFWa4uo9CIg8IkKteilRiz0vu+H6cmKeYyVFd+rFScRQu1NNovTSOitnUPb0w+O1TZxbGZZWnYk90gGIwn4+GgLHf+Kj+0iIqcRrlO1VJUXmHMYlYYlaRLI1rXXbkru7K/3ZkH4V77X2eWcZlWh3m6MlrqNJMqj/3J6ARHUFjhFjlSxEhgINBDgC52iM7JRPyeokBGhcAZlQqXZEOrPWDFUKXIa+5b9gzDMzX24XPF9JWKAnNIuhSuLKu4Yp4aYUG0pEaTX980clz73t1D3JDJMcMhqxkucMz9zFZDppZMHXANMMaE75Bo7e484v7fLeKBcsrEZa+pTSge3Cts7wtqy6kodp3aLsq5XFMlsWvVEn1sM9OcrhB797p8LOd6utVsNZnyz63s9KRNlfFb/o2Y9QnnePIHu9y2DwB4nGNgZmD4/7u08f8cBiMGTMANAHlmBMw=)
+      format("woff");
+    font-weight: 800;
+    font-style: italic;
+  }`;
   return /* @__PURE__ */ v("div", {
-    style: { width: size, height: size, zIndex: -1, top: 20, right: 20, position: "absolute", opacity: 0.3 }
-  }, /* @__PURE__ */ v("svg", {
+    style: { width: size, opacity: 0.5, margin: "0 auto" }
+  }, /* @__PURE__ */ v("style", {
+    dangerouslySetInnerHTML: { __html: styleHtml }
+  }), /* @__PURE__ */ v("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 58.87 59.21"
-  }, /* @__PURE__ */ v("g", null, /* @__PURE__ */ v("g", null, /* @__PURE__ */ v("path", {
-    fill: "white",
-    d: "M35.17 26.25c1.31.37 2.72.21 4 .56a9.91 9.91 0 011.08 18.9c-2.28.9-4.87.34-7 1.78a6.05 6.05 0 107 9.9 6 6 0 001.79-2 7.73 7.73 0 00.85-3.39 10.18 10.18 0 019.32-9.43 8.49 8.49 0 003.15-.57 6.18 6.18 0 002.39-2 6.12 6.12 0 00-1.51-8.52 6.18 6.18 0 00-2.49-1 20.83 20.83 0 01-4-.63 10 10 0 01-3.09-1.73 10.29 10.29 0 01-3.49-5.63c-.27-1.26-.17-2.49-.47-3.72a6.05 6.05 0 10-10 6 5.91 5.91 0 002.47 1.48z"
-  }), /* @__PURE__ */ v("path", {
-    fill: "white",
-    d: "M32.24 35.57c-.37 1.31-.21 2.72-.56 4a9.91 9.91 0 01-18.9 1.08c-.9-2.28-.34-4.87-1.78-6.95a6.05 6.05 0 10-7.92 8.75 7.76 7.76 0 003.45.8A10.19 10.19 0 0116 52.57a8.64 8.64 0 00.61 3.14 6.19 6.19 0 001.94 2.39 6.12 6.12 0 009.54-4 20.83 20.83 0 01.63-4A10.19 10.19 0 0136 43.52c1.21-.27 2.47-.14 3.67-.47a6 6 0 00-3.23-11.66 6.11 6.11 0 00-2.77 1.66 6 6 0 00-1.43 2.52z"
-  }), /* @__PURE__ */ v("path", {
-    fill: "white",
-    d: "M23.71 33c-1.31-.37-2.72-.21-4-.56A10.11 10.11 0 0112.44 25a10.09 10.09 0 016.15-11.47c2.28-.9 4.87-.34 7-1.78a6.06 6.06 0 10-8.76-7.93A7.83 7.83 0 0016 7.28a10.17 10.17 0 01-9.32 9.43 8.86 8.86 0 00-3.14.61 6.28 6.28 0 00-2.39 1.94 6.11 6.11 0 004 9.54 20.83 20.83 0 014 .63 10.23 10.23 0 013.09 1.73 10.29 10.29 0 013.49 5.63c.27 1.21.14 2.47.47 3.67A6 6 0 1023.71 33z"
-  }), /* @__PURE__ */ v("path", {
-    fill: "white",
-    d: "M26.63 23.68c.37-1.31.21-2.72.56-4a9.91 9.91 0 0118.9-1.08c.9 2.28.34 4.87 1.78 7a6.05 6.05 0 009.9-7 6.29 6.29 0 00-2-1.79 7.9 7.9 0 00-3.45-.8 10.17 10.17 0 01-9.45-9.37 8.68 8.68 0 00-.61-3.14 6.26 6.26 0 00-1.92-2.4 6.13 6.13 0 00-9.54 4 20.83 20.83 0 01-.63 4 10.11 10.11 0 01-1.73 3.09 10.24 10.24 0 01-5.63 3.49c-1.21.27-2.47.14-3.67.47a6 6 0 003.23 11.66 6.33 6.33 0 004.26-4.13z"
-  })))));
+    viewBox: "0 0 80 18"
+  }, /* @__PURE__ */ v("text", {
+    x: "40",
+    y: "11",
+    "text-anchor": "middle",
+    "dominant-baseline": "middle",
+    fill: "#FFF",
+    "fill-rule": "evenodd",
+    "font-family": "GuildW",
+    "font-size": "20"
+  }, "GuildW")));
 }
 
-// src/plugins/views/DaoView.tsx
+// plugins/views/DaoView.tsx
 function DaoView() {
-  const { daoColor, daoName, provider, coreContract, daoContract, myAddressLowerCase, daoAddressLowerCase } = useStoreA();
+  const { provider, coreContract, daoContract, daoContractAPI, myAddressLowerCase, daoAddressLowerCase, states } = useStoreA();
   const selectedPlanetId = useSelectedPlanet();
   function getRandomActionId() {
     const hex = "0123456789abcdef";
@@ -27286,23 +27409,19 @@ function DaoView() {
       planets = planets.filter(isNotDaoPlanet);
       echo(`RegisterPlanetOwners: ${planets.length} planets...`);
       const locationIds = planets.map((p2) => `0x${p2.locationId}`);
-      const updateTx = await daoContract.registerPlanetOwners(locationIds);
-      const updateTxResponse = await updateTx.wait();
-      console.log(`RegisterPlanetOwners: tx`, updateTx, updateTxResponse);
+      await daoContractAPI.registerPlanetOwners(locationIds, getRandomActionId());
       echo(`RegisterPlanetOwners: complete`);
     } catch (error) {
       console.log(`RegisterPlanetOwners: error`, error);
       echo(`RegisterPlanetOwners: error ${error}`);
     }
   }
-  async function _safeTransferPlanet(p2) {
+  async function _tryTransferPlanets(p2) {
     try {
-      await ensurePlanetRegisteredToMe(p2);
       await df.contractsAPI.transferOwnership(p2.locationId, daoAddressLowerCase, getRandomActionId());
-      await ensurePlanetOwnedByDao(p2);
       return true;
     } catch (e3) {
-      console.error(`transfer planet error`, e3);
+      console.error(`transfer planet error`, p2, e3);
       return false;
     }
   }
@@ -27310,8 +27429,12 @@ function DaoView() {
     const desc = `transfer ${planets.length} planets to dao`;
     try {
       echo(`${desc} start...`);
-      const successedPlanets = await Promise2.filter(planets, _safeTransferPlanet);
-      await bulkUiRefresh(successedPlanets).catch(console.error);
+      const planetsAlreadyOwnedByDao = planets.filter(isDaoPlanet);
+      const planetsOwnedByMe = planets.filter(isMyPlanet);
+      const planetsOwnAndRegisteredToMe = await Promise2.filter(planetsOwnedByMe, isPlanetRegisteredToMe);
+      const planetsTransferSuccessed = await Promise2.filter(planetsOwnAndRegisteredToMe, _tryTransferPlanets);
+      const planetsTransferSuccessConfirmed = await Promise2.filter(planetsTransferSuccessed, (p2) => isDaoPlanetInContract(p2.locationId));
+      const successedPlanets = [...planetsAlreadyOwnedByDao, ...planetsTransferSuccessConfirmed];
       echo(`${desc} complete`);
       return successedPlanets;
     } catch (e3) {
@@ -27323,37 +27446,29 @@ function DaoView() {
   async function _contractWithdrawSilver(planets) {
     if (!planets || planets.length === 0)
       return;
-    try {
-      const gasLimit = 1e3 * 1e4;
-      const locationIds = planets.map((p2) => `0x${p2.locationId}`);
-      const tx = await daoContract.withdrawSilverAndReturnPlanets(locationIds, { gasLimit });
-      console.log(`WithdrawSilver: tx`, tx);
-      const receipt = await tx.wait();
-      console.log(`WithdrawSilver: receipt`, receipt);
-      echo(`WithdrawSilver: block number ${receipt?.blockNumber}`);
-    } catch (e3) {
-      console.log(`WithdrawSilver: error`, e3);
-      echo(`WithdrawSilver: error ${e3}`);
-    }
-  }
-  async function makeFindArgs(p2) {
-    return df.snarkHelper.getFindArtifactArgs(p2.location.coords.x, p2.location.coords.y);
-  }
-  async function _contractFindArtifacts(planets) {
-    if (!planets || planets.length === 0)
+    const gameRunning = await daoContract.isGameRunning();
+    if (!gameRunning) {
+      echo(`WithdrawSilver: game is not in the running time`);
       return;
-    try {
-      const gasLimit = 1e3 * 1e4;
-      const findArgs = await Promise2.map(planets, makeFindArgs);
-      const tx = await daoContract.findArtifactAndReturnPlanets(findArgs, { gasLimit });
-      console.log(`FindArtifact: tx`, tx);
-      const receipt = await tx.wait();
-      console.log(`FindArtifact: receipt`, receipt);
-      echo(`FindArtifact: block number ${receipt?.blockNumber}, status = ${receipt?.status === 1 ? "success" : "failed " + receipt?.status}`);
-    } catch (e3) {
-      console.log(`FindArtifact: error`, e3);
-      echo(`FindArtifact: error ${e3}`);
     }
+    try {
+      const locationIds = planets.map((p2) => `0x${p2.locationId}`);
+      await daoContractAPI.withdrawSilverAndReturnPlanets(locationIds, getRandomActionId());
+    } catch (e3) {
+      console.error(`WithdrawSilver: error`, e3);
+      echo(`WithdrawSilver: error ${e3}`);
+      try {
+        echo(`ReturnPlanets start...`);
+        await _returnPlanets(planets);
+        echo(`ReturnPlanets complete`);
+      } catch (e1) {
+        console.error(`ReturnPlanets error`, e1);
+        echo(`ReturnPlanets error ${e1}`);
+      }
+    }
+  }
+  function isMyPlanet(planet) {
+    return planet.owner.toLowerCase() === myAddressLowerCase;
   }
   function isDaoPlanet(planet) {
     return planet.owner.toLowerCase() === daoAddressLowerCase;
@@ -27373,185 +27488,40 @@ function DaoView() {
     const planet = await coreContract.planets(`0x${p2.locationId}`);
     return planet.owner.toLowerCase() == myAddressLowerCase;
   }
-  async function ensurePlanetRegisteredToMe(p2) {
-    if (!await isPlanetRegisteredToMe(p2)) {
-      throw Error(`planet ${p2.locationId} has not registered to me (${myAddressLowerCase})`);
-    }
+  async function isMyDaoPlanet(p2) {
+    return isDaoPlanet(p2) && await isPlanetRegisteredToMe(p2);
   }
-  async function ensurePlanetOwnedByDao(p2) {
-    if (!await isDaoPlanetInContract(p2.locationId)) {
-      throw Error(`planet ${p2.locationId} is not owned by dao ${daoAddressLowerCase}`);
-    }
-  }
-  async function checkSelectedPlanetStatus() {
-    if (!selectedPlanetId) {
-      echo(`Please seleted a planet`);
-      return;
-    }
-    const planet = df.getPlanetWithId(selectedPlanetId);
-    const pName = getPlanetName(planet);
-    console.log(`selectedPlanet`, planet);
-    const owner = planet.owner.toLowerCase();
-    switch (owner) {
-      case daoAddressLowerCase:
-        const registrar = (await daoContract.registeredOwners(`0x${selectedPlanetId}`)).toLowerCase();
-        if (registrar === ethers_exports.constants.AddressZero) {
-          echo(`selected planet is ${pName}, owned by dao (${owner}), registered to nobody`);
-        } else if (registrar === myAddressLowerCase) {
-          echo(`selected planet is ${pName}, owned by dao (${owner}), registered to me (${owner})`);
-        } else {
-          echo(`selected planet is ${pName}, owned by dao (${owner}), registered to player ${owner}`);
-        }
-        break;
-      case myAddressLowerCase:
-        echo(`selected planet is ${pName}, owned by me (${myAddressLowerCase})`);
-        break;
-      case ethers_exports.constants.AddressZero:
-        echo(`selected planet is ${pName}, owned by nobody`);
-        break;
-      default:
-        echo(`selected planet is ${pName}, owned by player ${owner}`);
-        break;
-    }
-  }
-  async function listAllPlanetsByOwner() {
-    const allOwnedPlanets = df.getAllOwnedPlanets();
-    const dict = {};
-    allOwnedPlanets.forEach((p2) => {
-      const owner = p2.owner.toLowerCase();
-      const planets = dict[owner] || [];
-      planets.push(p2);
-      dict[owner] = planets;
-    });
-    const planetsByOwner = [];
-    for (const owner in dict) {
-      const planets = dict[owner];
-      const planetCount = planets.length;
-      const role = owner === myAddressLowerCase ? "me" : owner === daoAddressLowerCase ? "dao" : "other";
-      planetsByOwner.push({ owner, role, planetCount, planets });
-    }
-    planetsByOwner.sort((a3, b3) => b3.planets.length - a3.planets.length);
-    echo(`PlanetsByOwner: ${allOwnedPlanets.length} planets, see them in developer console (Press F12 in Chrome)`);
-    console.log(`PlanetsByOwner`, planetsByOwner);
-  }
-  async function listPlanets(fetcher, listName, selectFirst = false) {
-    echo("");
-    echo(`${listName}: fetch start...`);
-    const planets = await fetcher();
-    console.log(`${listName}`, planets);
-    if (!planets || planets.length === 0) {
-      echo(`${listName}: no planet found.`);
-    } else {
-      const planetsInfo = planets.map((p2) => `  ${getPlanetName(p2)}, ${p2.locationId}`).join("\n");
-      echo(`${listName}: found ${planets.length} planets: [
-${planetsInfo}
-]`);
-      if (selectFirst) {
-        ui.setSelectedId(planets[0]?.locationId);
-      }
-    }
-  }
-  async function listAllDaoPlanets() {
-    return listPlanets(async () => {
-      let planets = df.getAllOwnedPlanets().filter(isDaoPlanet);
-      return planets;
-    }, "DaoPlanets", true);
-  }
-  async function listDaoPlanetsRegisteredToMe() {
-    return listPlanets(async () => {
-      let planets = df.getAllOwnedPlanets().filter(isDaoPlanet);
-      planets = await Promise2.filter(planets, isPlanetRegisteredToMe);
-      return planets;
-    }, "DaoPlanetsRegisteredToMe", true);
-  }
-  async function listWithdrawablePlanets() {
-    return listPlanets(async () => {
-      const planets = await allCandidatePlanets();
-      return planets.filter((p2) => p2.planetType === import_types4.PlanetType.TRADING_POST && p2.silver > 100);
-    }, "WithdrawablePlanets", true);
-  }
-  async function listProspectablePlanets() {
-    return listPlanets(async () => {
-      const planets = await allCandidatePlanets();
-      return planets.filter(isProspectable).filter(enoughEnergyToProspect);
-    }, "ProspectablePlanets", true);
-  }
-  async function listFindablePlanets() {
-    return listPlanets(async () => {
-      const planets = await allCandidatePlanets();
-      const currentBlockNumber = await provider.getBlockNumber();
-      return planets.filter((p2) => isFindable(p2, currentBlockNumber));
-    }, "FindablePlanets", true);
+  function isWithdrawablePlanet(p2) {
+    return p2.planetType === import_types4.PlanetType.TRADING_POST && p2.silver > 100;
   }
   async function _withdrawSilver(planets) {
-    planets = planets.filter((p2) => p2.planetType === import_types4.PlanetType.TRADING_POST && p2.silver > 100);
-    console.log(`WithdrawSilver: ${planets.length} planets matched`, planets);
-    if (!planets.length) {
-      echo(`WithdrawSilver: no planet matched`);
+    const gameRunning = await daoContract.isGameRunning();
+    if (!gameRunning) {
+      echo(`WithdrawSilver: game is not in the running time`);
       return;
     }
-    echo(`WithdrawSilver: ${planets.length} planets matched`);
-    await bulkUiRefresh(planets);
     await _registerPlanetOwners(planets);
     planets = await _safeTransferPlanets(planets);
     await _contractWithdrawSilver(planets);
     planets = await Promise2.filter(planets, isMyPlanetInContract);
     echo(`WithdrawSilver: complete, returned ${planets.length} planets`);
   }
-  async function _safeProspectPlanet(p2) {
-    const pName = getPlanetName(p2);
-    const desc = `prospect planet ${pName}`;
-    try {
-      const actionId = getRandomActionId();
-      const prospectReceipt = await df.contractsAPI.prospectPlanet(p2.locationId, actionId);
-      const prospectStatus = prospectReceipt.status;
-      echo(`${desc}: block number = ${prospectReceipt.blockNumber}, status = ${prospectStatus}`);
-      if (!prospectStatus) {
-        echo(`${desc}: status error ${prospectStatus}`);
-        console.error(`${desc}: status error`, prospectStatus);
-        return false;
-      }
-      return true;
-    } catch (e3) {
-      echo(`${desc}: error ${e3}`);
-      console.error(`${desc}: error`, e3);
-    }
+  async function _returnPlanets(planets) {
+    return daoContractAPI.returnPlanets(planets.map((p2) => p2.locationId), getRandomActionId());
   }
-  async function _prospect(planets) {
-    planets = planets.filter(isProspectable).filter(enoughEnergyToProspect);
-    console.log(`Prospect: ${planets.length} planets matched`, planets);
-    if (!planets.length) {
-      echo(`Prospect: no planet matched`);
-      return;
-    }
-    echo(`Prospect: ${planets.length} planets matched`);
-    planets = await Promise2.filter(planets, _safeProspectPlanet);
-    await df.bulkHardRefreshPlanets(planets.map((p2) => p2.locationId));
-    echo(`Prospect: complete, prospected ${planets.length} planets`);
+  function getMyPlanets() {
+    return df.getMyPlanets();
   }
-  async function _findArtifact(planets) {
-    const currentBlockNumber = await provider.getBlockNumber();
-    planets = planets.filter((p2) => isFindable(p2, currentBlockNumber));
-    console.log(`FindArtifact: ${planets.length} planets`, planets);
-    if (!planets.length) {
-      echo(`FindArtifact: no planet matched`);
-      return;
-    }
-    echo(`FindArtifact: ${planets.length} planets matched`);
-    await bulkUiRefresh(planets);
-    await _registerPlanetOwners(planets);
-    planets = await _safeTransferPlanets(planets);
-    await _contractFindArtifacts(planets);
-    planets = await Promise2.filter(planets, isMyPlanetInContract);
-    echo(`FindArtifact: complete, returned ${planets.length} planets`);
-  }
-  async function allCandidatePlanets() {
-    const myPlanets = df.getMyPlanets();
+  async function getMyDaoPlanets() {
     const daoPlanets = df.getAllOwnedPlanets().filter(isDaoPlanet);
-    const myDaoPlanets = await Promise2.filter(daoPlanets, isPlanetRegisteredToMe);
+    return Promise2.filter(daoPlanets, isPlanetRegisteredToMe);
+  }
+  async function getMyPlanetsAndMyDaoPlanets() {
+    const myPlanets = getMyPlanets();
+    const myDaoPlanets = await getMyDaoPlanets();
     return [...myPlanets, ...myDaoPlanets];
   }
-  async function selectedApplyOperation(operation, opName) {
+  async function selectedApplyOperation({ name: name2, filter: filter2, operation }) {
     echo("");
     if (!selectedPlanetId) {
       echo(`Please seleted a planet`);
@@ -27559,9 +27529,16 @@ ${planetsInfo}
     }
     const planet = df.getPlanetWithId(selectedPlanetId);
     const pName = getPlanetName(planet);
-    const desc = `${opName} on selected planet (${pName})`;
+    const desc = `${name2} on selected planet (${pName})`;
     echo(`${desc} start...`);
     try {
+      if (filter2) {
+        const match = await filter2(planet);
+        if (!match) {
+          echo(`${name2} error: selected planet not match`);
+          return;
+        }
+      }
       await operation([planet]);
       echo(`${desc} complete`);
     } catch (e3) {
@@ -27569,100 +27546,104 @@ ${planetsInfo}
       console.log(`${desc} error`, e3);
     }
   }
-  async function allApplyOperation(operation, opName) {
-    echo("");
-    const desc = `${opName} for all planets`;
-    echo(`${desc} start...`);
-    try {
-      const planets = await allCandidatePlanets();
-      await operation(planets);
-      echo(`${desc} complete`);
-    } catch (e3) {
-      echo(`${desc} error: ${e3}`);
-      console.log(`${desc} error`, e3);
+  const operationInProgress = {};
+  async function batchApplyOperation({ name: name2, source, filter: filter2 = null, operation, batchSize = 20 }) {
+    if (operationInProgress[name2]) {
+      echo(`${name2}: another operation is still running, try later.`);
+      return;
     }
+    operationInProgress[name2] = true;
+    try {
+      echo("");
+      echo(`${name2}: start...`);
+      let planets = await source();
+      if (filter2) {
+        planets = await Promise2.filter(planets, (p2) => filter2(p2), { concurrency: 3 });
+      }
+      if (!planets.length) {
+        echo(`${name2}: no planet matched`);
+      } else {
+        echo(`${name2}: ${planets.length} planets matched`);
+        console.log(`${name2}: ${planets.length} planets matched`, planets);
+        if (batchSize > 0 && batchSize < planets.length) {
+          for (let i3 = 0; i3 < planets.length; i3 += batchSize) {
+            const chunk = planets.slice(i3, i3 + batchSize);
+            await operation(chunk);
+          }
+        } else {
+          await operation(planets);
+        }
+      }
+      echo(`${name2}: complete`);
+    } catch (e3) {
+      echo(`${name2} error: ${e3}`);
+      console.log(`${name2} error`, e3);
+    }
+    operationInProgress[name2] = false;
   }
   async function selectedWithdrawSilver() {
-    return selectedApplyOperation(_withdrawSilver, "WithdrawSilver");
+    return selectedApplyOperation({ name: "WithdrawSilver", filter: isWithdrawablePlanet, operation: _withdrawSilver });
   }
-  async function selectedProspect() {
-    return selectedApplyOperation(_prospect, "Prospect");
+  async function selectedReturnPlanet() {
+    return selectedApplyOperation({ name: "ReturnPlanet", filter: isMyDaoPlanet, operation: _returnPlanets });
   }
-  async function selectedFindArtifact() {
-    return selectedApplyOperation(_findArtifact, "FindArtifact");
+  const { batchWithdrawLoading, batchReturnLoading, setBatchWithdrawLoading, setBatchReturnLoading } = states;
+  async function batchWithdrawSilver() {
+    setBatchWithdrawLoading(true);
+    await batchApplyOperation({ name: "BatchWithdrawSilver", source: getMyPlanetsAndMyDaoPlanets, filter: isWithdrawablePlanet, operation: _withdrawSilver });
+    setBatchWithdrawLoading(false);
   }
-  async function allWithdrawSilver() {
-    return allApplyOperation(_withdrawSilver, "WithdrawSilver");
+  async function batchReturnPlanets() {
+    setBatchReturnLoading(true);
+    await batchApplyOperation({ name: "BatchReturnPlanets", source: getMyDaoPlanets, filter: null, operation: _returnPlanets });
+    setBatchReturnLoading(false);
   }
-  async function allProspect() {
-    return allApplyOperation(_prospect, "Prospect");
-  }
-  async function allFindArtifact() {
-    return allApplyOperation(_findArtifact, "FindArtifact");
-  }
+  const styleHtml = `.guildw-button {
+  min-width: 400px;
+  padding: 10px 15px!important;
+  border: 1px solid white!important;
+}
+.guildw-button:hover {
+  border: 1px solid transparent!important;
+}
+.guildw-button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  background: #666;
+  border: 1px solid #AAA!important;
+}`;
   return /* @__PURE__ */ v("div", {
-    style: { padding: 10, height: "100%", overflowY: "scroll" }
-  }, /* @__PURE__ */ v("div", {
-    style: { display: "flex", flexDirection: "row", alignItems: "center", gap: 10 }
-  }, /* @__PURE__ */ v(Logo, null), /* @__PURE__ */ v("span", null, "DAO")), /* @__PURE__ */ v("div", null, /* @__PURE__ */ v("div", null, /* @__PURE__ */ v("p", {
-    style: { marginTop: 8 }
-  }, "1. Operation on Selected Planet:"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
+    style: {
+      padding: 10,
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "stretch",
+      alignContent: "center",
+      flexWrap: "wrap",
+      gap: 15
+    }
+  }, /* @__PURE__ */ v("style", {
+    dangerouslySetInnerHTML: { __html: styleHtml }
+  }), /* @__PURE__ */ v("div", null, /* @__PURE__ */ v(Logo, null)), /* @__PURE__ */ v("button", {
+    className: "guildw-button",
     onClick: selectedWithdrawSilver
-  }, "Withdraw Silver"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: selectedProspect
-  }, "Prospect"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: selectedFindArtifact
-  }, "Find Artifact")), /* @__PURE__ */ v("div", null, /* @__PURE__ */ v("p", {
-    style: { marginTop: 8 }
-  }, "2. Operation on All Matched Planets:"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: allWithdrawSilver
-  }, "Withdraw Silver"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: allProspect
-  }, "Prospect"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: allFindArtifact
-  }, "Find Artifacts")), /* @__PURE__ */ v("div", null, /* @__PURE__ */ v("p", {
-    style: { marginTop: 8 }
-  }, "3. Check Status:"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: checkMyContribution
-  }, "Check My Contribution"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: checkSelectedPlanetStatus
-  }, "Selected Planet Status")), /* @__PURE__ */ v("div", null, /* @__PURE__ */ v("p", {
-    style: { marginTop: 8 }
-  }, "4. Advanced Mode: List And Select Planets"), /* @__PURE__ */ v("div", null, /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: listAllPlanetsByOwner
-  }, "listAllPlanetsByOwner"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: listAllDaoPlanets
-  }, "DaoPlanets"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: listDaoPlanetsRegisteredToMe
-  }, "DaoPlanetsRegisteredToMe")), /* @__PURE__ */ v("div", {
-    style: { marginTop: 8 }
-  }, /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: listWithdrawablePlanets
-  }, "WithdrawablePlanets"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: listProspectablePlanets
-  }, "ProspectablePlanets"), /* @__PURE__ */ v("button", {
-    style: { marginRight: 8 },
-    onClick: listFindablePlanets
-  }, "FindablePlanets")))));
+  }, "Withdraw selected planet silver"), /* @__PURE__ */ v("button", {
+    className: "guildw-button",
+    onClick: batchWithdrawSilver,
+    disabled: batchWithdrawLoading
+  }, "Withdraw all planets silver", batchWithdrawLoading ? " (Running...)" : ""), /* @__PURE__ */ v("button", {
+    className: "guildw-button",
+    onClick: selectedReturnPlanet
+  }, "Return selected planet (rescue mode)"), /* @__PURE__ */ v("button", {
+    className: "guildw-button",
+    onClick: batchReturnPlanets,
+    disabled: batchReturnLoading
+  }, "Return all planets (rescue mode)", batchReturnLoading ? " (Running...)" : ""));
 }
 
-// src/plugins/views/LeaderboardView.tsx
-var Promise3 = __toModule(require_bluebird());
-
-// src/plugins/components/Loading.tsx
+// plugins/components/Loading.tsx
 function Loading({ length = 5, padding: padding2 = 8 }) {
   const [indicator, setIndicator] = l2(". ");
   y2(() => {
@@ -27679,19 +27660,25 @@ function Loading({ length = 5, padding: padding2 = 8 }) {
   }, indicator);
 }
 
-// src/plugins/components/ErrorLabel.tsx
+// plugins/components/ErrorLabel.tsx
 function ErrorLabel({ error }) {
   return error ? /* @__PURE__ */ v("p", {
     style: { marginBottom: 8, padding: 8, color: colors.dfred }
   }, "Error: ", error.message) : null;
 }
 
-// src/plugins/views/LeaderboardView.tsx
+// plugins/data/LeaderboardLoader.ts
+var Promise3 = require_bluebird();
 function loadLeaderboard(store) {
-  const { daoName, daoContract, coreContract, daoAddressLowerCase } = store;
-  const [leaderboard, setLeaderboard] = l2({ dao: null, players: [] });
-  const [loading, setLoading] = l2(true);
-  const [error, setError] = l2(null);
+  const { daoName, daoContract, coreContract, daoAddressLowerCase, states } = store;
+  const {
+    leaderboardLoading,
+    setLeaderboardLoading,
+    leaderboardData,
+    setLeaderboardData,
+    leaderboardError,
+    setLeaderboardError
+  } = states;
   async function getDfScore(address) {
     try {
       const player = await coreContract.players(address);
@@ -27710,21 +27697,23 @@ function loadLeaderboard(store) {
     }
   }
   async function loadData() {
+    if (leaderboardLoading) {
+      return;
+    }
     try {
       echo("");
       echo(`${daoName} fetch data...`);
-      setLoading(true);
-      setError(null);
+      setLeaderboardLoading(true);
+      setLeaderboardError(null);
       const count = await daoContract.playerCounter();
-      const indexes = [...Array(count.toNumber()).keys()];
+      const indexes = [...Array(Number(count)).keys()];
       const players = await Promise3.map(indexes, (i3) => daoContract.players(i3));
-      const dfScores = await Promise3.map(players, getDfScore);
       const contributions = await Promise3.map(players, getContribution);
       const daoDfScore = await getDfScore(daoAddressLowerCase);
-      const playerContributions = indexes.map((i3) => {
+      let playerContributions = indexes.map((i3) => {
         return {
           address: players[i3],
-          dfScore: dfScores[i3],
+          dfScore: 0,
           contribution: contributions[i3],
           rank: 0
         };
@@ -27742,21 +27731,23 @@ function loadLeaderboard(store) {
         rank: 0
       };
       console.log({ daoPlayer, sortedPlayerContributions });
-      setLeaderboard({ dao: daoPlayer, players: sortedPlayerContributions });
-      setLoading(false);
+      setLeaderboardData({ dao: daoPlayer, players: sortedPlayerContributions });
+      setLeaderboardLoading(false);
       echo(`${daoName} fetch data complete`);
     } catch (e3) {
-      setLoading(false);
-      setError(e3);
-      echo(`${daoName} fetch data error ${error}`);
+      setLeaderboardLoading(false);
+      setLeaderboardError(e3);
+      echo(`${daoName} fetch data error ${e3}`);
       console.log(`error`, e3);
     }
   }
   y2(() => {
     loadData();
   }, []);
-  return { loading, error, leaderboard, loadData };
+  return { loading: leaderboardLoading, error: leaderboardError, data: leaderboardData, loadData };
 }
+
+// plugins/views/LeaderboardView.tsx
 function addressUrl(address) {
   return `https://blockscout.com/xdai/mainnet/address/${address}/transactions`;
 }
@@ -27778,8 +27769,9 @@ function PlayerName({ address }) {
 function LeaderboardView() {
   function renderPlayer(score) {
     const color = getPlayerColor(score.address);
-    const { address, rank, contribution, dfScore } = score;
+    const { address, rank, contribution } = score;
     return /* @__PURE__ */ v("div", {
+      className: "board-player",
       style: { display: "flex", gap: 5, color, alignItems: "baseline" },
       key: rank
     }, /* @__PURE__ */ v("p", null, rank, "."), /* @__PURE__ */ v(PlayerName, {
@@ -27789,17 +27781,20 @@ function LeaderboardView() {
     }, contribution));
   }
   function renderLeaderboard(store) {
-    const { leaderboard, loading, error, loadData } = loadLeaderboard(store);
+    const { data, loading, error, loadData } = loadLeaderboard(store);
     function renderData() {
       return /* @__PURE__ */ v("div", {
-        style: { height: "100%", width: "100%", display: "flex", flexDirection: "column", alignItems: "start", gap: 5 }
+        className: "board-team-data",
+        style: { height: 0, flex: "1 1 auto", width: "100%", display: "flex", flexDirection: "column", alignItems: "start", gap: 5 }
       }, /* @__PURE__ */ v("p", {
         style: { fontSize: "0.9em", color: "white" }
-      }, "Team Score: ", leaderboard?.dao?.dfScore || 0), /* @__PURE__ */ v("p", {
+      }, "Team Score: ", data?.dao?.dfScore || 0), /* @__PURE__ */ v("p", {
         style: { fontSize: "0.8em" }
       }, "Player Contributions:"), /* @__PURE__ */ v("div", {
-        style: { width: "100%", flexGrow: 1, overflowY: "scroll", fontSize: "0.8em" }
-      }, leaderboard.players.map(renderPlayer)), /* @__PURE__ */ v("button", {
+        className: "board-players",
+        style: { height: 0, flex: "1 1 auto", width: "100%", overflowY: "scroll", fontSize: "0.8em" }
+      }, data?.players?.map(renderPlayer)), /* @__PURE__ */ v("button", {
+        style: { fontSize: "0.8em" },
         onClick: loadData
       }, "Refresh"));
     }
@@ -27816,7 +27811,8 @@ function LeaderboardView() {
     const daoUrl = addressUrl(store.daoAddressLowerCase);
     const daoStr = `(${addressText(store.daoAddressLowerCase)})`;
     return /* @__PURE__ */ v("div", {
-      style: { padding: 5, flexGrow: 1, width: "50%", display: "flex", flexDirection: "column" }
+      className: "board-team",
+      style: { width: "0", flex: "1 1 auto", padding: 5, display: "flex", flexDirection: "column" }
     }, /* @__PURE__ */ v("p", {
       style: { color: store.daoColor, paddingBottom: 5 }
     }, store.daoName, " ", /* @__PURE__ */ v("a", {
@@ -27825,11 +27821,12 @@ function LeaderboardView() {
     }, daoStr)), content);
   }
   return /* @__PURE__ */ v("div", {
+    className: "board-panel",
     style: { display: "flex", gap: 10, alignItems: "stretch", height: "100%" }
   }, renderLeaderboard(useStoreA()), renderLeaderboard(useStoreB()));
 }
 
-// src/plugins/views/DaoAppA.tsx
+// plugins/views/DaoAppA.tsx
 function DaoApp() {
   return /* @__PURE__ */ v(StoreProviderA, {
     value: createStoreA(),
@@ -27845,7 +27842,7 @@ function DaoApp() {
   })));
 }
 
-// src/plugins/GangPluginRed.tsx
+// plugins/GangPluginRed.tsx
 var DaoPlugin = class {
   constructor() {
     this.container = null;
