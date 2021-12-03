@@ -27443,12 +27443,23 @@ function DaoView() {
       return [];
     }
   }
+  async function _tryReturnPlanets(planets) {
+    try {
+      echo(`ReturnPlanets start...`);
+      await _returnPlanets(planets);
+      echo(`ReturnPlanets complete`);
+    } catch (e3) {
+      console.error(`ReturnPlanets error`, e3);
+      echo(`ReturnPlanets error ${e3}`);
+    }
+  }
   async function _contractWithdrawSilver(planets) {
     if (!planets || planets.length === 0)
       return;
     const gameRunning = await daoContract.isGameRunning();
     if (!gameRunning) {
       echo(`WithdrawSilver: game is not in the running time`);
+      await _tryReturnPlanets(planets);
       return;
     }
     try {
@@ -27457,14 +27468,7 @@ function DaoView() {
     } catch (e3) {
       console.error(`WithdrawSilver: error`, e3);
       echo(`WithdrawSilver: error ${e3}`);
-      try {
-        echo(`ReturnPlanets start...`);
-        await _returnPlanets(planets);
-        echo(`ReturnPlanets complete`);
-      } catch (e1) {
-        console.error(`ReturnPlanets error`, e1);
-        echo(`ReturnPlanets error ${e1}`);
-      }
+      await _tryReturnPlanets(planets);
     }
   }
   function isMyPlanet(planet) {
