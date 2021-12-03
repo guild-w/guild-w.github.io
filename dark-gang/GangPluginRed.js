@@ -27217,8 +27217,8 @@ try {
 
 // plugins/data/DaoConfig.ts
 var DAO_ABI = require_DaoContract();
-var DAO_CONTRACT_ADDRESS_RED = "0xA4f33bf0911Cad687c71961CCF029a00FF93C765";
-var DAO_CONTRACT_ADDRESS_BLUE = "0xC6c98b76A56B9F8d6952068Db173181EDEc1dc61";
+var DAO_CONTRACT_ADDRESS_RED = "0x62c4Ba6d70F9a4186f28ce169aEd46201D5B92Ab";
+var DAO_CONTRACT_ADDRESS_BLUE = "0xfD431F575AFab4b1a295D430F919987a0e6c33C1";
 var PROVIDER_RPC_URL = "https://rpc-df.xdaichain.com";
 
 // plugins/data/Store.ts
@@ -27511,7 +27511,7 @@ function DaoView() {
     echo(`WithdrawSilver: complete, returned ${planets.length} planets`);
   }
   async function _returnPlanets(planets) {
-    return daoContractAPI.returnPlanets(planets.map((p2) => p2.locationId), getRandomActionId());
+    return daoContractAPI.returnPlanets(planets.map((p2) => `0x${p2.locationId}`), getRandomActionId());
   }
   function getMyPlanets() {
     return df.getMyPlanets();
